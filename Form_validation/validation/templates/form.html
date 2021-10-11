@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation complete</title>
+</head>
+
+<body>
+    <form action="" method="POST">
+    {% csrf_token %}
+        <table>
+            {{data}}
+        </table> 
+        <hr>
+        {% comment %} {% for i in data %}
+        {{i.label_tag}}
+        {{i}}
+        {% endfor %} {% endcomment %}
+
+
+
+        <input type="submit" name="submit" id="">
+        
+    </form>
+    {{wrg}}
+    <hr>
+
+    <!-- {{data}}
+    <hr>
+    {{data.as_table}}
+    <hr>
+    {{data.as_p}}
+    <hr>
+   {{data.ul_li}} -->
+    <!-- <hr>
+    {{data.Name}}
+    <hr> -->
+
+</body>
+
+</html>
