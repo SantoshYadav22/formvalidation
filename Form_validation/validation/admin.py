@@ -6,6 +6,6 @@ from .models import Model
 # admin.site.register(Model)
 
 class studentAdmin(admin.ModelAdmin):
-    list_display=('id','Name','Age','Email','Place')
+    list_display=('id','Name','Age','Email','Place','Password','ReEnterPassword')
 
 admin.site.register(Model, studentAdmin)

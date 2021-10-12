@@ -28,7 +28,11 @@ def ShowFormData(request):
             email=fm.cleaned_data['Email']
             place=fm.cleaned_data['Place']
             psd=fm.cleaned_data['Password']
-            re_psd=fm.cleaned_data['Re_Enter_Password']
+            re_psd=fm.cleaned_data['ReEnterPassword']
+
+            #SAVE DATA TO MODEL
+            reg=Model(Name=name,Age=age,Email=email,Place=place,Password=psd,ReEnterPassword=re_psd)
+            reg.save()
 
             print("Name:",name)
             print('Age:',age)
@@ -45,14 +49,14 @@ def ShowFormData(request):
             #     print('password match')
             #     wrong='right password'
             #     return render (request,'base.html',{'nm':name,'wrg':wrong})
-            Write = psd != re_psd
-            if Write :
-                print('password error')
-                wrong='wrong password'
+            # Write = psd != re_psd
+            # if Write :
+            #     print('password error')
+            #     wrong='wrong password'
 
-            else:
-                print('password match')
-                wrong='right password'
+            # else:
+            #     print('password match')
+            #     wrong='right password'
             return HttpResponseRedirect('/blog/success/')
             # ,{'wrt':wrong}
 
