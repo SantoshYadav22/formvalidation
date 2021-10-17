@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON DATA</title>
+</head>
+<body>
+
+    {% for  i in datas %}
+    
+    <h1>Name</h1>{{i.Name}}
+    
+    <h1>Age</h1>{{i.Age}}
+    
+    <h1>Email</h1>{{i.Email}}
+    
+    <h1>Place</h1>{{i.Place}}
+    
+    <h1>Password</h1>{{i.Password}}
+    
+    <h1>ReEnterPassword</h1>{{i.ReEnterPassword}}
+    <br>
+    
+   
+    {% endfor %}
+  
+   
+</body>
+</html>

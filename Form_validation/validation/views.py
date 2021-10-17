@@ -7,8 +7,7 @@ from .serializers import StudentSerializers
 from rest_framework.renderers import JSONRenderer
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-
-
+import requests
 # Create your views here.
 
 def validation(request):
@@ -77,3 +76,11 @@ def student_detail1(request):
     serializer=StudentSerializers(stu,many=True)
     json_data=JSONRenderer().render(serializer.data)
     return HttpResponse(json_data, content_type='application/json')
+
+def json(request):
+    URL = 'http://127.0.0.1:8000/blog/serial1/'
+
+    r = requests.get(url=URL)
+    data=r.json()
+    print(data)
+    return render (request,'json.html',{"datas":data})

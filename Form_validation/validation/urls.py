@@ -9,4 +9,5 @@ urlpatterns = [
     path('serial/<int:inp>',views.student_detail),
     path('serial1/',views.student_detail1),
     path('success/',views.thankyou),
+    path('json/',views.json),
 ]
